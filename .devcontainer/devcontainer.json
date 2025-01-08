@@ -20,6 +20,6 @@
       }
     }
   },
-  "postCreateCommand": "pip install -r backend/requirements.txt && cd frontend && npm install",
+ "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt",
   "remoteUser": "vscode"
 }
