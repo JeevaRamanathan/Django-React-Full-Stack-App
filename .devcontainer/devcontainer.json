@@ -2,6 +2,11 @@
   "name": "FullStack Ecommerce App",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
   "forwardPorts": [8000, 3000],
+   "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
   "customizations": {
     "vscode": {
       "settings": {
