@@ -25,7 +25,7 @@
       }
     }
   },
- "postCreateCommand": "daytona env list | sed 's/: /=/g' > ./frontend/.env && npm install --prefix frontend && pip install -r backend/requirements.txt",
+ "postCreateCommand": "daytona env list | sed 's/: /=/g' > ../frontend/.env && npm install --prefix frontend && pip install -r backend/requirements.txt",
   "postAttachCommand": "npm start --prefix frontend & python backend/manage.py makemigrations & python backend/manage.py runserver 0.0.0.0:8000 &",
   "remoteUser": "vscode"
 }
