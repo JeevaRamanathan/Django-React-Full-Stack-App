@@ -25,7 +25,7 @@
       }
     }
   },
- "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python manage.py makemigartions",
- "postStartCommand": "nohup bash -c 'npm run dev &'",
+  "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python backend/manage.py makemigrations",
+  "postStartCommand": "python backend/manage.py runserver 0.0.0.0:8000 & npm run dev --prefix frontend",
   "remoteUser": "vscode"
 }
