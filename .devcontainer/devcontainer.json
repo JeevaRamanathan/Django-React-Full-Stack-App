@@ -1,7 +1,7 @@
 {
   "name": "FullStack Ecommerce App",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
-  "forwardPorts": [8000, 3000],
+  "forwardPorts": [8000, 5173],
    "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "18"
@@ -25,6 +25,7 @@
       }
     }
   },
- "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && npm run dev",
+ "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python manage.py makemigartions",
+ "postStartCommand": "nohup bash -c 'npm run dev &'",
   "remoteUser": "vscode"
 }
