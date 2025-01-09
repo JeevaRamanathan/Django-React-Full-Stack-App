@@ -25,7 +25,6 @@
       }
     }
   },
- "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt",
- "postStartCommand": "./setup.sh",
+ "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && npm run dev",
   "remoteUser": "vscode"
 }
