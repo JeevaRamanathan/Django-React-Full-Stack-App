@@ -25,7 +25,7 @@
       }
     }
   },
-  "initializeCommand": "test -f .env || touch .env",
+ "initializeCommand": "bash -c 'test -f .env || touch .env'",
  "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python backend/manage.py makemigrations && python backend/manage.py migrate",
   "remoteUser": "vscode"
 }
