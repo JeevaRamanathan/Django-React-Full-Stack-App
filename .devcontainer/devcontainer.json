@@ -25,6 +25,6 @@
       }
     }
   },
- "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python backend/manage.py makemigrations && python backend/manage.py migrate && bash -c 'test -f .env || touch .env'",
+ "postCreateCommand": "npm install --prefix frontend && pip install -r backend/requirements.txt && python backend/manage.py makemigrations && python backend/manage.py migrate && bash -c 'test -f frontend/.env || touch frontend/.env'",
   "remoteUser": "vscode"
 }
